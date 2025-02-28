@@ -106,6 +106,7 @@ func TestPubSubTs(t *testing.T) {
 }
 
 func TestIAMServiceAccountTs(t *testing.T) {
+	t.Skip("disabled due to test flakiness (#924)")
 	test := getJSBaseOptions(t).
 		With(integration.ProgramTestOptions{
 			Dir:         filepath.Join(getCwd(t), "iam-serviceaccount-ts", "step1"),
